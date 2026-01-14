@@ -14,7 +14,7 @@
             
             <div class="product-card">
                 <div class="h-56 hover-zoom-container">
-                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600" class="hover-zoom-img" alt="Varilla">
+                    <img src="https://www.mndelgolfo.com/blog/wp-content/uploads/2020/12/Conoces-el-uso-de-la-varilla-corrugada-dentro-de-las-construcciones.jpg" class="hover-zoom-img" alt="Varilla">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-[#003366] mb-2">Varilla Corrugada</h3>
@@ -24,7 +24,7 @@
 
             <div class="product-card">
                 <div class="h-56 hover-zoom-container">
-                    <img src="https://plus.unsplash.com/premium_photo-1664302152996-26795ac00d3d?w=600" class="hover-zoom-img" alt="Armex">
+                    <img src="https://mca-salamanca.com/cdn/shop/products/dcbc6a414de71f0f3f568319c92a70e9_640x.jpg?v=1587919541" class="hover-zoom-img" alt="Armex">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-[#003366] mb-2">Armex y Castillos</h3>
@@ -34,21 +34,51 @@
 
             <div class="product-card">
                 <div class="h-56 hover-zoom-container">
-                    <img src="https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?w=600" class="hover-zoom-img" alt="Alambre">
+                    <img src="https://www.mallasgalbis.es/img/ybc_blog/post/tipos-de-alambres_ok.jpg" class="hover-zoom-img" alt="Alambre">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#003366] mb-2">Alambres y Mallas</h3>
-                    <p class="text-gray-600 text-sm">Alambrón, alambre recocido por kilo, malla electrosoldada para pisos y clavos estándar o para concreto.</p>
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Alambres</h3>
+                    <p class="text-gray-600 text-sm">Alambrón, alambre recocido de variedad de tamaños, resistencias y grosores para cualquier tipo de uso.</p>
                 </div>
             </div>
             
             <div class="product-card">
                 <div class="h-56 hover-zoom-container">
-                    <img src="https://images.unsplash.com/photo-1533062635-4122d25d1947?w=600" class="hover-zoom-img" alt="Perfiles">
+                    <img src="https://www.acerosocotlan.mx/wp-content/uploads/2024/09/Tubo-cedula-scaled.jpg" class="hover-zoom-img" alt="Perfiles">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-[#003366] mb-2">Perfiles Tubulares</h3>
                     <p class="text-gray-600 text-sm">PTR, perfil rectangular y cuadrado para herrería. Ángulos, soleras y láminas para techumbres.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://i0.wp.com/mallasjuliotorres.com/wp-content/uploads/2022/03/mesh-7053737_1920-min.jpg?fit=1920%2C1280&ssl=1" class="hover-zoom-img" alt="Perfiles">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Mallas</h3>
+                    <p class="text-gray-600 text-sm">Mallas para cercado de acero de alta resistencia y sencilla instalacion para todo tipo de uso.</p>
+                </div>
+            </div>
+
+             <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://tornillosymas.com/wp-content/uploads/2023/04/tym-1-1-e1681773540768.jpeg" class="hover-zoom-img" alt="Perfiles">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Tornilleria</h3>
+                    <p class="text-gray-600 text-sm">Tornilleria de alta duracion de acero comun y acero inoxidable de alta resistencia para construcciones duraderas y de alto impacto.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://www.indasa.com.mx/Themes/IndasaTheme/Content/images/products/ferreteria/cadena-indasa.webp" class="hover-zoom-img" alt="Perfiles">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Cadenas</h3>
+                    <p class="text-gray-600 text-sm">Eslabones de acero reforzado y gran capacidad de carga. Seguridad y resistencia para usos industriales o de resguardo.</p>
                 </div>
             </div>
         </div>

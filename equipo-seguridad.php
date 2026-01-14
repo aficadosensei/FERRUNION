@@ -79,8 +79,26 @@
                 <h3 class="text-xl font-bold text-[#003366] mb-2">Ropa de trabajo o Indumentaria de protección</h3>
                 <p class="text-gray-600 text-sm">Ropa visible de obra para resaltar tu presencia y aumentar tu seguridad apesar de las condiciones ambientales.</p>
                 </div>
+            </div>
 
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://www.segusa.com.mx/wp-content/uploads/2023/06/mascarilla-de-seguridad-industrial-scaled.jpg" class="hover-zoom-container" alt="Proteccion">
+                </div>
+                <div class="p-6">
+                <h3 class="text-xl font-bold text-[#003366] mb-2">Mascarillas o Respiradores</h3>
+                <p class="text-gray-600 text-sm">Mascarillas que permitiran la correcta respiracion en ambientes de duro trabajo sin sufrir graves consecuencias a corto o largo plazo.<p>
+                </div>
+            </div>
 
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://marcapl.com/blog/wp-content/uploads/2017/11/pantalla.jpg" class="hover-zoom-container" alt="Proteccion">
+                </div>
+                <div class="p-6">
+                <h3 class="text-xl font-bold text-[#003366] mb-2">Caretas o Protecores Faciales</h3>
+                <p class="text-gray-600 text-sm">Protectores faciales para el uso seguro de herramientas electricas o que manejen rebaba metalica.</p>
+                </div>
             </div>
 
         </div>

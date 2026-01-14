@@ -14,31 +14,90 @@
             
             <div class="product-card">
                 <div class="h-56 hover-zoom-container">
-                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600" class="hover-zoom-img" alt="Cemento">
+                    <img src="https://www.cemix.com/wp-content/uploads/2021/09/cemix-que-es-el-cemento-512x256.png" class="hover-zoom-img" alt="Cemento">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-[#003366] mb-2">Cementos</h3>
-                    <p class="text-gray-600 text-sm">Contamos con cemento gris y blanco de alta resistencia. Venta por bulto individual o por tonelada para grandes obras.</p>
+                    <p class="text-gray-600 text-sm">Variedades de cemento blanco y gris de alta calidad y resistencia para cualquier estructura.</p>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="h-56 hover-zoom-container">
-                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600" class="hover-zoom-img" alt="Mortero">
+                    <img src="https://constructivo.com/imgPosts/1577369796m5BInn7F.jpg" class="hover-zoom-img" alt="Mortero">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#003366] mb-2">Mortero y Cal</h3>
-                    <p class="text-gray-600 text-sm">Mezclas listas para albañilería. Mortero para pegado y cal hidratada de la mejor pureza para tus acabados.</p>
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Morteros</h3>
+                    <p class="text-gray-600 text-sm">Mezclas listas para albañilería. Mortero para pegado y construccion de alta resistencia.</p>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="h-56 hover-zoom-container">
-                    <img src="https://images.unsplash.com/photo-1621460245089-3224976735a4?w=600" class="hover-zoom-img" alt="Agregados">
+                    <img src="https://www.heraldo.mx/wp-content/uploads/2016/06/arena.jpg" class="hover-zoom-img" alt="Agregados">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#003366] mb-2">Arenas y Gravas</h3>
-                    <p class="text-gray-600 text-sm">Material de banco limpio. Arena de río #4 y #5, grava de 3/4 y piedra base. Servicio de flete disponible.</p>
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Arenas</h3>
+                    <p class="text-gray-600 text-sm">Limpia y libre de impurezas. El agregado fino indispensable para lograr mezclas de mortero y concreto de máxima calidad.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://substackcdn.com/image/fetch/$s_!j3nb!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F824d9c14-b392-4ad9-9d77-f989998e824b_644x266.jpeg" class="hover-zoom-container" alt="Agregados">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Cal</h3>
+                    <p class="text-gray-600 text-sm">Cal de distintas marcas y de alta calidad para todo tipo de uso.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://img.freepik.com/fotos-premium/hombre-esta-poniendo-baldosas-ceramicas_191163-1130.jpg" class="hover-zoom-container" alt="Agregados">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Pega pisos</h3>
+                    <p class="text-gray-600 text-sm">De alta eficiencia para un pegado rapido y duradero, ademas de contar con distintas marcas.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://panelyacanalados.com/wp-content/uploads/2022/10/pila-de-laminas-acanaladas-r-101-ternium-almacenadas.jpg" class="hover-zoom-img" alt="Agregados">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Laminas</h3>
+                    <p class="text-gray-600 text-sm">Para construccion generalizada, ya sea comercial u domestico.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://ventaeinstalaciondetablaroca.com/wp-content/uploads/2024/01/tablaroca-para-que-sirve.jpg" class="hover-zoom-img" alt="Agregados">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Tablaroca</h3>
+                    <p class="text-gray-600 text-sm">Sencilles en colocazion, ligeras. Excelente opcion para divisones domesticas u empresariales.</p>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://www.materialesvarmex.mx/wp-content/uploads/2021/03/materiales-varmex-bg-1024x684.jpg" class="hover-zoom-img" alt="Agregados">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Productos de Construccion (general)</h3>
+                    <p class="text-gray-600 text-sm">Amplia variedad de material de construccion de todo tipo, calidad y dureza.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://construcaldas.com/wp-content/uploads/2021/01/grava.jpeg" class="hover-zoom-img" alt="Agregados">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Grava</h3>
+                    <p class="text-gray-600 text-sm">Solidez estructural garantizada. Agregado grueso perfecto para aportar resistencia a firmes, columnas y losas de concreto.</p>
                 </div>
             </div>
         </div>

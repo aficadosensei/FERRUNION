@@ -11,9 +11,11 @@
 
     <div class="container mx-auto px-4 py-16">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
             <div class="product-card">
                 <div class="h-56 hover-zoom-container">
-                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600" class="hover-zoom-img" alt="Cubeta">
+                    <img src="https://supercolors.mx/wp-content/uploads/2023/03/paint-buckets-2022-11-07-07-07-10-utc-scaled.jpg" class="hover-zoom-img" alt="Cubeta">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-[#003366] mb-2">Pinturas Vinílicas</h3>
@@ -23,7 +25,7 @@
 
             <div class="product-card">
                 <div class="h-56 hover-zoom-container">
-                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600" class="hover-zoom-img" alt="Impermeabilizante">
+                    <img src="https://pinturasdoal.com/wp-content/uploads/Aplicacion-correcta-del-impermeabilizante.jpg" class="hover-zoom-img" alt="Impermeabilizante">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-[#003366] mb-2">Impermeabilizantes</h3>
@@ -33,7 +35,37 @@
 
             <div class="product-card">
                 <div class="h-56 hover-zoom-container">
-                    <img src="https://images.unsplash.com/photo-1599648937841-356b278fc048?w=600" class="hover-zoom-img" alt="Brochas">
+                    <img src="https://www.revista.ferrepat.com/wp-content/uploads/2018/09/C%C3%B3mo-elegir-brochas-para-pintar-600x400-1.jpg" class="hover-zoom-img" alt="Brochas">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Complementos</h3>
+                    <p class="text-gray-600 text-sm">Todo para aplicar: Brochas, rodillos, extensiones, charolas, cinta masking tape y plásticos protectores.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://supercolors.mx/wp-content/uploads/2023/09/sellador-destacad.jpeg" class="hover-zoom-img" alt="Brochas">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Selladores</h3>
+                    <p class="text-gray-600 text-sm">Todo para aplicar: Brochas, rodillos, extensiones, charolas, cinta masking tape y plásticos protectores.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://www.revista.ferrepat.com/wp-content/uploads/2018/09/C%C3%B3mo-elegir-brochas-para-pintar-600x400-1.jpg" class="hover-zoom-img" alt="Brochas">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Complementos</h3>
+                    <p class="text-gray-600 text-sm">Todo para aplicar: Brochas, rodillos, extensiones, charolas, cinta masking tape y plásticos protectores.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://www.revista.ferrepat.com/wp-content/uploads/2018/09/C%C3%B3mo-elegir-brochas-para-pintar-600x400-1.jpg" class="hover-zoom-img" alt="Brochas">
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-[#003366] mb-2">Complementos</h3>
