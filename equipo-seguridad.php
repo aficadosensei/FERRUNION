@@ -4,8 +4,8 @@
     <div class="relative bg-yellow-700 h-64 flex items-center justify-center overflow-hidden">
         <img src="https://img.freepik.com/fotos-premium/equipo-seguridad-casco-gafas-proteccion-chaleco-proteccion-oidos-guantes_926199-3064446.jpg?semt=ais_hybrid&w=740&q=80" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Cableado">
         <div class="relative z-10 text-center px-4 animate-fade-up">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white">MATERIAL ELÉCTRICO</h1>
-            <p class="text-yellow-400 mt-2 font-bold uppercase tracking-widest">Conectividad y Energía</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white">EQUIPO DE SEGURIDAD</h1>
+            <p class="text-yellow-400 mt-2 font-bold uppercase tracking-widest">La seguirdad es la prioridad</p>
         </div>
     </div>
     

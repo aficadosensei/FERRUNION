@@ -2,7 +2,7 @@
 
 <main class="bg-gray-50 flex flex-col min-h-screen">
     <div class="relative bg-gray-800 h-64 flex items-center justify-center overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1567789884554-0b844b59fb4c?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Aceros">
+        <img src="https://www.materialesparaconstruccion.com.mx/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2020/03/aceros.png.webp" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Aceros">
         <div class="relative z-10 text-center px-4 animate-fade-up">
             <h1 class="text-4xl md:text-5xl font-extrabold text-white">ACEROS Y REFUERZOS</h1>
             <p class="text-orange-400 mt-2 font-bold uppercase tracking-widest">Estructura y Soporte</p>

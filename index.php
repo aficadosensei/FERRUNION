@@ -2,7 +2,8 @@
 
 <main>
     <section class="relative h-[500px] w-full overflow-hidden bg-gray-900 hover-zoom-container">
-        <img src="https://lh5.googleusercontent.com/p/AF1QipMLsZxs-0EyHxWlmwN7RYbia4LBvIENTYIpoKWG=w800-h500-k-no" class="hover-zoom-img absolute inset-0 object-cover opacity-60" alt="Ferretería">
+        <img src="https://lh5.googleusercontent.com/p/AF1QipMLsZxs-0EyHxWlmwN7RYbia4LBvIENTYIpoKWG=w800-h500-k-no   " class="hover-zoom-img absolute inset-0 object-cover opacity-60" alt="Ferretería">
+        
         <div class="absolute inset-0 flex items-center container mx-auto px-4 z-10">
             <div class="max-w-2xl text-white space-y-6 animate-fade-up">
                 <div class="inline-block bg-orange-500 px-3 py-1 text-xs font-bold uppercase rounded mb-2">Soluciones Integrales</div>
@@ -22,7 +23,7 @@
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-[#003366] uppercase">Nuestro Catalogo</h2>
+                <h2 class="text-3xl font-extrabold text-[#003366] uppercase">Nuestro Catálogo</h2>
                 <div class="h-1 w-20 bg-orange-500 mx-auto mt-4 rounded"></div>
             </div>
 
@@ -66,5 +67,9 @@
         </div>
     </section>
 </main>
+
+<a href="capacitacion.php" class="fixed bottom-4 left-4 z-40 text-gray-400 opacity-30 hover:opacity-100 hover:text-orange-500 transition-all duration-300" title="Acceso Interno">
+    <i class="ph-fill ph-student text-3xl"></i>
+</a>
 
 <?php include 'includes/footer.php'; ?>

@@ -7,7 +7,7 @@
                     <h3 class="text-2xl font-bold text-white mb-1">¿Necesitas asesoría técnica?</h3>
                     <p class="text-blue-200">Nuestros expertos te ayudan a calcular tu material.</p>
                 </div>
-                <a href="https://wa.me/523131196528?text=Hola,%20Buen%20dia%20me%20gustaria%20recibir%20asesoria." target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 shadow-lg flex items-center gap-2">
+                <a href="https://wa.me/523121663401?text=Hola,%20Buen%20dia%20me%20gustaria%20recibir%20asesoria." target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105 shadow-lg flex items-center gap-2">
                     <i class="ph-fill ph-whatsapp-logo text-xl"></i> Contactar Asesor
                 </a>
             </div>
@@ -31,13 +31,18 @@
                         <li><a href="aceros.php" class="hover:text-white transition">Catálogo de Aceros</a></li>
                         <li><a href="construccion.php" class="hover:text-white transition">Materiales de Construcción</a></li>
                         <li><a href="plomeria.php" class="hover:text-white transition">Plomería y Tubería</a></li>
+                        <li><a href="acabados.php" class="hover:text-white transition">Acabados</a></li>
+                        <li><a href="acabados.php" class="hover:text-white transition">Electricos</a></li>
+                        <li><a href="acabados.php" class="hover:text-white transition">Herramientas</a></li>
+                        <li><a href="acabados.php" class="hover:text-white transition"></a></li>
+                        <li><a href="acabados.php" class="hover:text-white transition">Acabados</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-white font-bold text-lg mb-4 text-orange-500">Visítanos</h4>
                     <ul class="space-y-3">
-                        <li class="flex gap-3"><i class="ph-fill ph-map-pin text-xl text-orange-500"></i>Av. central</li>
-                        <li class="flex gap-3"><i class="ph-fill ph-phone text-xl text-orange-500"></i> (313)119 65 28</li>
+                        <li class="flex gap-3"><i class="ph-fill ph-map-pin text-xl text-orange-500"></i>28130, Calle Progreso 980, Unión Sur, Tecomán, Col.</li>
+                        <li class="flex gap-3"><i class="ph-fill ph-phone text-xl text-orange-500"></i>(312) 166 34 01</li>
                         <li class="flex gap-3"><i class="ph-fill ph-envelope text-xl text-orange-500"></i> ventas@launion.com</li>
                     </ul>
                 </div>
@@ -50,7 +55,7 @@
     </footer>
 
     <div class="floating-btn-container">
-        <a href="https://wa.me/523133252617?text=Hola,%20vengo%20de%20su%20sitio%20web." target="_blank" class="floating-btn" title="Contactar">
+        <a href="https://wa.me/523121663401?text=Hola,%20vengo%20de%20su%20sitio%20web." target="_blank" class="floating-btn" title="Contactar">
             <i class="ph-fill ph-whatsapp-logo"></i>
             <span class="floating-badge">1</span>
         </a>

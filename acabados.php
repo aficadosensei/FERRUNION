@@ -29,7 +29,7 @@
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-[#003366] mb-2">Impermeabilizantes</h3>
-                    <p class="text-gray-600 text-sm">Protege tu hogar de filtraciones. Impermeabilizante acrílico rojo y blanco con duración de 3, 5 y 7 años.</p>
+                    <p class="text-gray-600 text-sm">Blindaje contra la humedad. Fórmulas de alta elasticidad y duración que protegen techos y muros contra filtraciones y goteras.</p>
                 </div>
             </div>
 
@@ -38,8 +38,8 @@
                     <img src="https://www.revista.ferrepat.com/wp-content/uploads/2018/09/C%C3%B3mo-elegir-brochas-para-pintar-600x400-1.jpg" class="hover-zoom-img" alt="Brochas">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#003366] mb-2">Complementos</h3>
-                    <p class="text-gray-600 text-sm">Todo para aplicar: Brochas, rodillos, extensiones, charolas, cinta masking tape y plásticos protectores.</p>
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Brochas</h3>
+                    <p class="text-gray-600 text-sm">Cerdas resistentes y precisas. Ideales para recortes, detalles y aplicación de pintura en superficies irregulares o esquinas.</p>
                 </div>
             </div>
 
@@ -49,27 +49,57 @@
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-[#003366] mb-2">Selladores</h3>
-                    <p class="text-gray-600 text-sm">Todo para aplicar: Brochas, rodillos, extensiones, charolas, cinta masking tape y plásticos protectores.</p>
+                    <p class="text-gray-600 text-sm">El sellador de silicona transparente multiusos es una excelente opción, ya que es versátil y muy demandado para baños, ventanas y diversas reparaciones.</p>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="h-56 hover-zoom-container">
-                    <img src="https://www.revista.ferrepat.com/wp-content/uploads/2018/09/C%C3%B3mo-elegir-brochas-para-pintar-600x400-1.jpg" class="hover-zoom-img" alt="Brochas">
+                    <img src="https://thumbs.dreamstime.com/b/pantalla-de-rodillos-pintura-en-una-ferreter%C3%ADa-con-varios-tama%C3%B1os-y-tipos-ideal-para-mostrar-el-almac%C3%A9n-hardware-diferentes-390991132.jpg" class="hover-zoom-img" alt="Brochas">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#003366] mb-2">Complementos</h3>
-                    <p class="text-gray-600 text-sm">Todo para aplicar: Brochas, rodillos, extensiones, charolas, cinta masking tape y plásticos protectores.</p>
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Rodillos</h3>
+                    <p class="text-gray-600 text-sm">Cobertura uniforme y rápida. Diferentes tipos de felpa para superficies lisas o rugosas, optimizando el rendimiento de la pintura.</p>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="h-56 hover-zoom-container">
-                    <img src="https://www.revista.ferrepat.com/wp-content/uploads/2018/09/C%C3%B3mo-elegir-brochas-para-pintar-600x400-1.jpg" class="hover-zoom-img" alt="Brochas">
+                    <img src="https://poliformas-plasticas.myshopify.com/cdn/shop/products/thinner-1l.jpg?v=1710518277" class="hover-zoom-img" alt="Brochas">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-[#003366] mb-2">Complementos</h3>
-                    <p class="text-gray-600 text-sm">Todo para aplicar: Brochas, rodillos, extensiones, charolas, cinta masking tape y plásticos protectores.</p>
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Thinner</h3>
+                    <p class="text-gray-600 text-sm">Disolvente multiusos de alta potencia. Esencial para diluir pinturas de aceite, barnices y limpiar herramientas después de su uso.</p>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://www.pinturastorcaza.com/wp-content/uploads/2020/04/app1.jpg" class="hover-zoom-img" alt="Brochas">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Estopa</h3>
+                    <p class="text-gray-600 text-sm">Limpieza profunda y absorbente. Fibra de algodón ideal para limpiar grasa, aceites, manos y derrames en talleres y obras.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://unosuministros.mx/wp-content/uploads/2021/03/blog_imagen_01-1080x675.jpg" class="hover-zoom-img" alt="Brochas">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Trapo industrial</h3>
+                    <p class="text-gray-600 text-sm">Resistencia y durabilidad. Retazos de tela seleccionados para limpieza de maquinaria y uso rudo sin dejar pelusa excesiva.</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="h-56 hover-zoom-container">
+                    <img src="https://i0.wp.com/losalbaniles.com/wp-content/uploads/2020/11/aplicando-yeso.png?fit=1124%2C632&ssl=1" class="hover-zoom-img" alt="Brochas">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#003366] mb-2">Yeso</h3>
+                    <p class="text-gray-600 text-sm">Perfecto para acabados limpios, detallados u cerrar imperfecciones en todo tipo de acabado.</p>
                 </div>
             </div>
         </div>

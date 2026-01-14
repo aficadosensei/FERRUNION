@@ -2,7 +2,7 @@
 
 <main class="bg-gray-50 flex flex-col min-h-screen">
     <div class="relative bg-gray-900 h-64 flex items-center justify-center overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1581235720704-06d3acfcb363?q=80&w=2000&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Herramientas">
+        <img src="https://aldacogrupoavance.es/wp-content/uploads/2022/11/blog-herramientas-scaled.webp" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Herramientas">
         <div class="relative z-10 text-center px-4 animate-fade-up">
             <h1 class="text-4xl md:text-5xl font-extrabold text-white">HERRAMIENTAS</h1>
             <p class="text-orange-400 mt-2 font-bold uppercase tracking-widest">Manuales, Eléctricas y Seguridad</p>

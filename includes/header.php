@@ -15,7 +15,7 @@
             <div class="flex gap-4">
                 <span class="flex items-center gap-1"><i class="ph-fill ph-phone text-orange-400"></i> (313) 32 420 00</span>
             </div>
-            <div class="hidden md:block">Horario: Lun-Sáb 8:00am - 7:00pm</div>
+            <div class="hidden md:block">Horario: Lun-Vie 8:00am - 7:00pm</div>
         </div>
     </div>
 
@@ -62,6 +62,8 @@
                     </div>
                 </div>
                 <a href="#contacto" class="hover:text-orange-500 transition">CONTACTO</a>
+
+                <a href="oportunidad.php" class="hover:text-orange-500 transition">OPORTUNIDAD LABORAL</a>
             </nav>
 
             <div class="flex items-center gap-4">
