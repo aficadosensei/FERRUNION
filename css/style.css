@@ -1,0 +1,122 @@
+/* css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root {
+    --font-primary: 'Inter', sans-serif;
+    --color-brand-blue: #003366;
+    --color-brand-dark: #002244;
+    --color-brand-orange: #f59e0b;
+    --color-whatsapp: #25D366;
+    --color-gray-bg: #f9fafb;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-gray-bg);
+    color: #1f2937;
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; transition: all 0.3s ease; }
+
+/* --- ANIMACIONES --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Efecto Zoom Suave en Imágenes */
+.hover-zoom-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.hover-zoom-img {
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hover-zoom-container:hover .hover-zoom-img {
+    transform: scale(1.15);
+}
+
+/* --- TARJETAS DE PRODUCTO (NUEVO DISEÑO LIMPIO) --- */
+.product-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--color-brand-orange);
+}
+
+/* Barra inferior decorativa en hover */
+.product-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: var(--color-brand-orange);
+    transition: width 0.4s ease;
+}
+
+.product-card:hover::after {
+    width: 100%;
+}
+
+/* Mega Menú */
+.group:hover .mega-menu {
+    display: block;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+/* Botones y UI */
+.btn-orange {
+    background-color: var(--color-brand-orange);
+    color: white;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.btn-orange:hover {
+    background-color: #ea580c;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+/* Botón Flotante WhatsApp */
+.floating-btn-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+}
+.floating-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background-color: var(--color-whatsapp);
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    font-size: 32px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.floating-btn:hover { transform: scale(1.1); }
