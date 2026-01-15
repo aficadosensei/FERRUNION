@@ -6,44 +6,44 @@ ini_set('display_errors', 0);
 session_start();
 
 // --- CONFIGURACIÓN ---
-$pass_empleado = "Union2026";      // Contraseña Nivel 1 (Ver)
-$pass_gerencia = "AdminUnion";     // Contraseña Nivel 2 (Subir/Editar)
+$pass_empleado = "Union2026";       // Contraseña Nivel 1 (Ver)
+$pass_gerencia = "AdminUnion";      // Contraseña Nivel 2 (Subir/Editar)
 $directorio_videos = "videos/";
 $limite_megas = 100;
 
 // --- LÓGICA PHP ---
 
-// 1. CERRAR SESIÓN (Total o solo Admin)
+// 1. CERRAR SESIÓN
 if (isset($_GET['logout'])) {
     session_destroy();
     header("Location: capacitacion.php");
     exit;
 }
 if (isset($_GET['cerrar_admin'])) {
-    unset($_SESSION['permiso_subir']); // Quita solo el permiso de admin
+    unset($_SESSION['permiso_subir']); 
     header("Location: capacitacion.php?v=menu");
     exit;
 }
 
-// 2. LOGIN GENERAL (Empleado)
+// 2. LOGIN GENERAL
 $error = "";
 if (isset($_POST['login_general'])) {
     if ($_POST['password'] === $pass_empleado) $_SESSION['rol'] = 'empleado';
     else $error = "Contraseña de empleado incorrecta.";
 }
 
-// 3. LOGIN ADMINISTRATIVO (Gerencia)
+// 3. LOGIN ADMINISTRATIVO
 if (isset($_POST['login_admin'])) {
     if ($_POST['admin_password'] === $pass_gerencia) $_SESSION['permiso_subir'] = true;
     else $error = "Contraseña de gerencia incorrecta.";
 }
 
-// 4. PROCESAR SUBIDA Y EDICIÓN (Solo si es Admin)
+// 4. PROCESAR ACCIONES (Subir, Editar, Borrar)
 $mensaje_sistema = "";
 
 if (isset($_SESSION['permiso_subir']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     
-    // A) SUBIR VIDEO
+    // A) SUBIR VIDEO NUEVO
     if (isset($_POST['accion']) && $_POST['accion'] == 'subir') {
         if (!file_exists($directorio_videos)) { mkdir($directorio_videos, 0777, true); }
 
@@ -52,7 +52,6 @@ if (isset($_SESSION['permiso_subir']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
         $nombre_fisico = uniqid() . "." . $extension; 
         $destino = $directorio_videos . $nombre_fisico;
 
-        // Validaciones básicas
         if ($_FILES['nuevo_video']['error'] !== UPLOAD_ERR_OK) {
             $mensaje_sistema = "<div class='bg-red-100 text-red-800 p-4 rounded mb-4'>❌ Error del servidor. Código: " . $_FILES['nuevo_video']['error'] . "</div>";
         } else {
@@ -65,23 +64,71 @@ if (isset($_SESSION['permiso_subir']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
                 file_put_contents($destino . ".json", json_encode($datos));
                 $mensaje_sistema = "<div class='bg-green-100 text-green-800 p-4 rounded mb-4 border-l-4 border-green-500'>✅ <b>Video publicado con éxito.</b></div>";
             } else {
-                $mensaje_sistema = "<div class='bg-red-100 text-red-800 p-4 rounded mb-4'>❌ Error al mover el archivo. Verifica permisos o tamaño.</div>";
+                $mensaje_sistema = "<div class='bg-red-100 text-red-800 p-4 rounded mb-4'>❌ Error al mover el archivo.</div>";
             }
         }
     }
 
-    // B) EDITAR DATOS
+    // B) EDITAR (Con opción de reemplazo de video)
     if (isset($_POST['accion']) && $_POST['accion'] == 'editar') {
-        $archivo = $_POST['archivo_objetivo'];
-        $ruta_json = $directorio_videos . $archivo . ".json";
+        $archivo_objetivo = $_POST['archivo_objetivo']; // Nombre del archivo actual (ej: asd1234.mp4)
+        $ruta_actual = $directorio_videos . $archivo_objetivo;
+        $ruta_json_actual = $ruta_actual . ".json";
         
-        $datos = [
-            'titulo' => $_POST['titulo'],
-            'descripcion' => $_POST['descripcion'],
-            'fecha' => date("d/m/Y") 
-        ];
-        file_put_contents($ruta_json, json_encode($datos));
-        $mensaje_sistema = "<div class='bg-blue-100 text-blue-800 p-4 rounded mb-4'>✏️ <b>Información actualizada.</b></div>";
+        // Datos del formulario
+        $nuevo_titulo = $_POST['titulo'];
+        $nueva_desc = $_POST['descripcion'];
+        
+        // Verificar si se subió un video de reemplazo
+        if (!empty($_FILES['reemplazo_video']['name']) && $_FILES['reemplazo_video']['error'] === UPLOAD_ERR_OK) {
+            
+            // 1. Subir el nuevo video
+            $nombre_archivo_nuevo = basename($_FILES["reemplazo_video"]["name"]);
+            $extension_nueva = strtolower(pathinfo($nombre_archivo_nuevo, PATHINFO_EXTENSION));
+            $nombre_fisico_nuevo = uniqid() . "." . $extension_nueva;
+            $destino_nuevo = $directorio_videos . $nombre_fisico_nuevo;
+
+            if (move_uploaded_file($_FILES["reemplazo_video"]["tmp_name"], $destino_nuevo)) {
+                // 2. Crear JSON para el nuevo video
+                $datos = [
+                    'titulo' => $nuevo_titulo,
+                    'descripcion' => $nueva_desc,
+                    'fecha' => date("d/m/Y") 
+                ];
+                file_put_contents($destino_nuevo . ".json", json_encode($datos));
+
+                // 3. Borrar el video y JSON viejos
+                if (file_exists($ruta_actual)) unlink($ruta_actual);
+                if (file_exists($ruta_json_actual)) unlink($ruta_json_actual);
+
+                $mensaje_sistema = "<div class='bg-blue-100 text-blue-800 p-4 rounded mb-4'>🔄 <b>Video reemplazado y datos actualizados.</b></div>";
+            } else {
+                $mensaje_sistema = "<div class='bg-red-100 text-red-800 p-4 rounded mb-4'>❌ Error al subir el video de reemplazo.</div>";
+            }
+
+        } else {
+            // Solo editar texto (sin cambiar video)
+            $datos = [
+                'titulo' => $nuevo_titulo,
+                'descripcion' => $nueva_desc,
+                'fecha' => date("d/m/Y") 
+            ];
+            file_put_contents($ruta_json_actual, json_encode($datos));
+            $mensaje_sistema = "<div class='bg-blue-100 text-blue-800 p-4 rounded mb-4'>✏️ <b>Información actualizada (Video mantenido).</b></div>";
+        }
+    }
+
+    // C) BORRAR VIDEO
+    if (isset($_POST['accion']) && $_POST['accion'] == 'borrar') {
+        $archivo_a_borrar = $_POST['archivo_objetivo'];
+        // Seguridad: basename evita que borren archivos fuera de la carpeta videos
+        $ruta_video = $directorio_videos . basename($archivo_a_borrar);
+        $ruta_json = $ruta_video . ".json";
+
+        if (file_exists($ruta_video)) unlink($ruta_video);
+        if (file_exists($ruta_json)) unlink($ruta_json);
+
+        $mensaje_sistema = "<div class='bg-red-100 text-red-800 p-4 rounded mb-4 border-l-4 border-red-500'>🗑️ <b>Video eliminado correctamente.</b></div>";
     }
 }
 
@@ -175,7 +222,7 @@ $vista = isset($_GET['v']) ? $_GET['v'] : 'menu';
                             <i class="ph-fill ph-gear text-4xl text-orange-600 group-hover:text-white"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-800 mb-2">Administrar</h3>
-                        <p class="text-gray-500 text-sm">Subir nuevos videos o editar existentes.</p>
+                        <p class="text-gray-500 text-sm">Subir, editar o eliminar videos.</p>
                         <span class="inline-block mt-4 text-orange-500 font-bold text-sm">Zona Restringida &rarr;</span>
                     </a>
                 </div>
@@ -214,7 +261,6 @@ $vista = isset($_GET['v']) ? $_GET['v'] : 'menu';
                 <?php endif; ?>
 
             <?php elseif ($vista == 'admin'): ?>
-                
                 <?php if (!$es_admin): ?>
                     <div class="max-w-sm mx-auto bg-white p-8 rounded-xl shadow-lg border-t-4 border-orange-500 text-center mt-10">
                         <i class="ph-fill ph-shield-warning text-4xl text-orange-500 mb-4"></i>
@@ -234,7 +280,7 @@ $vista = isset($_GET['v']) ? $_GET['v'] : 'menu';
                     <div class="flex justify-between items-center mb-6">
                         <div>
                             <h2 class="text-2xl font-bold text-orange-600">Panel Administrativo</h2>
-                            <p class="text-sm text-gray-500">Subir y editar contenido.</p>
+                            <p class="text-sm text-gray-500">Subir, editar y borrar contenido.</p>
                         </div>
                         <div class="flex gap-3">
                             <a href="?cerrar_admin=true" class="text-xs bg-gray-200 hover:bg-gray-300 text-gray-600 px-3 py-2 rounded font-bold">Bloquear Admin</a>
@@ -271,7 +317,7 @@ $vista = isset($_GET['v']) ? $_GET['v'] : 'menu';
                         </form>
                     </div>
 
-                    <h3 class="font-bold text-lg text-gray-700 mb-4 border-b pb-2">Editar Videos Existentes</h3>
+                    <h3 class="font-bold text-lg text-gray-700 mb-4 border-b pb-2">Videos Existentes</h3>
                     <?php $videos = glob($directorio_videos . "*.{mp4,avi,mov,mkv}", GLOB_BRACE); ?>
                     
                     <div class="space-y-4">
@@ -293,9 +339,20 @@ $vista = isset($_GET['v']) ? $_GET['v'] : 'menu';
                                 <p class="text-xs text-gray-500 mb-1">Archivo: <?php echo $archivo_fisico; ?></p>
                                 <p class="text-sm text-gray-600 line-clamp-1"><?php echo $desc; ?></p>
                             </div>
-                            <button onclick="abrirEditor('<?php echo $archivo_fisico; ?>', '<?php echo addslashes($titulo); ?>', '<?php echo addslashes($desc); ?>')" class="bg-blue-100 text-blue-700 px-4 py-2 rounded text-sm font-bold hover:bg-blue-200 transition flex items-center gap-2">
-                                <i class="ph-bold ph-pencil-simple"></i> Editar
-                            </button>
+                            
+                            <div class="flex gap-2">
+                                <button onclick="abrirEditor('<?php echo $archivo_fisico; ?>', '<?php echo addslashes($titulo); ?>', '<?php echo addslashes($desc); ?>')" class="bg-blue-100 text-blue-700 px-4 py-2 rounded text-sm font-bold hover:bg-blue-200 transition flex items-center gap-2">
+                                    <i class="ph-bold ph-pencil-simple"></i> Editar
+                                </button>
+                                
+                                <form method="POST" onsubmit="return confirm('¿Estás seguro de ELIMINAR este video? Esta acción no se puede deshacer.');">
+                                    <input type="hidden" name="accion" value="borrar">
+                                    <input type="hidden" name="archivo_objetivo" value="<?php echo $archivo_fisico; ?>">
+                                    <button type="submit" class="bg-red-100 text-red-700 px-4 py-2 rounded text-sm font-bold hover:bg-red-200 transition flex items-center gap-2">
+                                        <i class="ph-bold ph-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                         <?php endforeach; ?>
                     </div>
@@ -311,20 +368,35 @@ $vista = isset($_GET['v']) ? $_GET['v'] : 'menu';
                 <h3 class="text-xl font-bold text-[#003366]">Editar Información</h3>
                 <div class="cursor-pointer" onclick="toggleModal('modal-editar')"><i class="ph-bold ph-x text-lg"></i></div>
             </div>
-            <form method="POST">
+            
+            <form method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="accion" value="editar">
                 <input type="hidden" name="archivo_objetivo" id="edit_filename">
+                
                 <div class="mb-4">
                     <label class="block text-sm font-bold text-gray-700 mb-1">Título</label>
                     <input type="text" name="titulo" id="edit_titulo" class="w-full border p-2 rounded focus:border-blue-900 outline-none" required>
                 </div>
+                
                 <div class="mb-4">
                     <label class="block text-sm font-bold text-gray-700 mb-1">Descripción</label>
-                    <textarea name="descripcion" id="edit_descripcion" rows="4" class="w-full border p-2 rounded focus:border-blue-900 outline-none"></textarea>
+                    <textarea name="descripcion" id="edit_descripcion" rows="3" class="w-full border p-2 rounded focus:border-blue-900 outline-none"></textarea>
                 </div>
+
+                <div class="mb-6 p-4 bg-gray-50 border border-gray-200 rounded">
+                    <label class="block text-xs font-bold text-orange-600 uppercase mb-2">Reemplazar Video (Opcional)</label>
+                    <input type="file" name="reemplazo_video" class="block w-full text-sm text-slate-500
+                      file:mr-4 file:py-2 file:px-4
+                      file:rounded-full file:border-0
+                      file:text-xs file:font-semibold
+                      file:bg-orange-50 file:text-orange-700
+                      hover:file:bg-orange-100" accept=".mp4,.avi,.mov">
+                    <p class="text-xs text-gray-400 mt-1">Si subes un archivo aquí, se borrará el video anterior.</p>
+                </div>
+
                 <div class="flex justify-end gap-3">
                     <button type="button" onclick="toggleModal('modal-editar')" class="text-gray-500 px-4 py-2 text-sm">Cancelar</button>
-                    <button type="submit" class="bg-[#003366] hover:bg-blue-900 text-white font-bold px-6 py-2 rounded">Guardar</button>
+                    <button type="submit" class="bg-[#003366] hover:bg-blue-900 text-white font-bold px-6 py-2 rounded">Guardar Cambios</button>
                 </div>
             </form>
         </div>
