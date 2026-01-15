@@ -1,9 +1,0 @@
-# Aumentar límite de subida a 256MB
-php_value upload_max_filesize 256M
-php_value post_max_size 260M
-
-# Aumentar tiempo de espera (para que no se corte mientras sube)
-php_value max_execution_time 600
-php_value max_input_time 600
-php_value memory_limit 512M
-

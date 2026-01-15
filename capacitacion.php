@@ -9,7 +9,7 @@ session_start();
 $pass_empleado = "Union2026";      // Contraseña Nivel 1 (Ver)
 $pass_gerencia = "AdminUnion";     // Contraseña Nivel 2 (Subir/Editar)
 $directorio_videos = "videos/";
-$limite_megas = 250;
+$limite_megas = 100;
 
 // --- LÓGICA PHP ---
 
