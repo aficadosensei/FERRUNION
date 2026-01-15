@@ -1,0 +1,3 @@
+# Archivo: solicitudes/.htaccess
+# Esto prohíbe que nadie vea los archivos de esta carpeta desde el navegador
+Deny from all

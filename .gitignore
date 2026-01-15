@@ -1,0 +1,23 @@
+# --- MULTIMEDIA (Pesado) ---
+# Ignorar toda la carpeta de videos
+videos/
+
+# Ignorar archivos de video sueltos por si acaso
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# --- PRIVACIDAD & DATOS (RRHH) ---
+# Ignorar cualquier archivo de texto en solicitudes (Nombres, correos, etc.)
+solicitudes/*.txt
+
+# EXCEPCIÓN: ¡No ignorar este archivo! 
+# (Esto obliga a Git a subir la carpeta vacía para que exista en otros equipos)
+!solicitudes/.gitkeep
+
+# --- SISTEMA & BASURA ---
+.DS_Store
+Thumbs.db
+*.log
+*.tmp

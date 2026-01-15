@@ -68,8 +68,14 @@
     </section>
 </main>
 
-<a href="capacitacion.php" class="fixed bottom-4 left-4 z-40 text-gray-400 opacity-30 hover:opacity-100 hover:text-orange-500 transition-all duration-300" title="Acceso Interno">
-    <i class="ph-fill ph-student text-3xl"></i>
-</a>
+<div class="fixed bottom-4 left-4 z-40 flex flex-col gap-2">
+    <a href="capacitacion.php" class="bg-gray-800 text-gray-400 p-2 rounded-full opacity-30 hover:opacity-100 hover:text-orange-500 hover:bg-gray-900 transition-all duration-300 shadow-lg" title="Capacitación">
+        <i class="ph-fill ph-student text-2xl"></i>
+    </a>
+    
+    <a href="admin_solicitudes.php" class="bg-gray-800 text-gray-400 p-2 rounded-full opacity-30 hover:opacity-100 hover:text-blue-400 hover:bg-gray-900 transition-all duration-300 shadow-lg" title="Portal RRHH - Solicitudes">
+        <i class="ph-fill ph-briefcase text-2xl"></i>
+    </a>
+</div>
 
 <?php include 'includes/footer.php'; ?>
